@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Sapna 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fbc2eb, #a6c1ee);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-shadow: 1px 1px 5px #ff69b4;
+    }
+    input[type="password"], button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      margin: 10px;
+    }
+    button {
+      background-color: #ff4081;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #e91e63;
+    }
+    #login, #welcome, #note-container, #final-question, #fireworks {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    #note-container {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 700px;
+      height: 300px;
+      overflow-y: auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #ff69b4;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    #note {
+      color: black;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: left;
+      white-space: pre-wrap;
+    }
+    .glow-button {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #fff;
+      background-color: transparent;
+      border: 2px solid #ff69b4;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    .fade-in {
+      animation: fadeIn 1.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    #fireworks h2 {
+      font-size: 2rem;
+      color: #ff69b4;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+  <div id="login">
+    <h1>🔐 Enter Love Passcode</h1>
+    <input type="password" id="passcode" placeholder="Enter passcode" />
+    <button onclick="checkPass()">Unlock 💗</button>
+  </div>
+
+  <div id="welcome">
+    <h1>Welcome my love, in my heart 💖</h1>
+    <button class="glow-button" onclick="showNote()">Click here Sapna ✨</button>
+  </div>
+
+  <div id="note-container">
+    <div id="note">
+hi my baby doll i hope tum thik hogi  
+tumhari yaad aati hai yaar  
+wo jo mujhe thodi si ladane wali  
+aur mujhase bat bat par bolane wali 'kuchh bhi'  
+thodi jealous type ki and romantic type ki  
+thoda sa jyada bolti thi  
+wo ladaki ki badi yaad aati hai  
+mai apni sapna ko yaad karata hu  
+
+tum sochti hogi 2 din milne se itna pyar kaise ho skta hai  
+hmm mana bahut kam tha wo hamre liye  
+but tumhre sath ride par jana  
+tumhra ye kahana ki mai pahali baar kisi ladake ke sath mandir gayi thi  
+tumhre mere kandhe par sar rakhna  
+bike par hug karna  
+par se itni achhi hawa chal rahi thi  
+tumhare mere naak se bachhon wali harkate karna  
+tumhara warm hug  
+tumako bachhi ko jaise fold karake seene se lage rahana  
+tumhare balo ko peeche karana  
+tumako kiss karana  
+nind aane par sulane ki koshish karana  
+
+tum jab ja rahi thi  
+mai hi pgl tha jo 8 baje sokar utha  
+tum ja rahi thi mujhe pata us time mujhe kaisa feel ho raha tha  
+mera pet jal raha tha  
+but when you come and hug me  
+mujhe lag raha tha ek chhota sa panda bol raha ho  
+mai ja rahi hu  
+
+mai to bagwan se pray kar raha tha  
+ki train 2 gante late ho jaye  
+aur ye hug 2 gante tak chalati rahe  
+
+mujhe bahut bura lag raha tha jab tum ja rahi thi  
+mai tumako khidaki se dekh raha tha  
+mujhe khud par taras aa raha thi  
+ki mai tumhe rok kyu nahi skta  
+
+and that is enough for me to fall in love with you  
+aaj bhi tum mere liye wahi  
+mera sapna  
+wahi meri cute panda ho  
+jisake sath maine ye time bitaya  
+
+i love you my baby
+    </div>
+    <button class="glow-button" onclick="askPanda()">Click here my panda 🐼</button>
+  </div>
+
+  <div id="final-question">
+    <h2>Kya tum mere sath hamesha rahogi? Tumako kabhi pyar ki kami nahi hone dunga, my darling 💞</h2>
+    <button onclick="showFireworks()">Yes ❤️</button>
+    <button onclick="sayNo()">No 💔</button>
+  </div>
+
+  <div id="fireworks">
+    <h2>I love you Sapna 💖</h2>
+  </div>
+
+  <script>
+    document.getElementById("login").style.display = "flex";
+
+    function checkPass() {
+      const pass = document.getElementById("passcode").value;
+      if (pass === "sapna07052025") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("welcome").style.display = "flex";
+      } else {
+        alert("Wrong passcode 💔");
+      }
+    }
+
+    function showNote() {
+      document.getElementById("welcome").style.display = "none";
+      document.getElementById("note-container").style.display = "flex";
+    }
+
+    function askPanda() {
+      document.getElementById("note-container").style.display = "none";
+      document.getElementById("final-question").style.display = "flex";
+    }
+
+    function showFireworks() {
+      document.getElementById("final-question").style.display = "none";
+      document.getElementById("fireworks").style.display = "flex";
+    }
+
+    function sayNo() {
+      document.getElementById("final-question").innerHTML = "<h2>Ok my baby, as your wish 😘</h2>";
+    }
+  </script>
+</body>
+</html>
